@@ -164,7 +164,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("15_4g4ok")
+"texture": ExtResource("22_tnf7o")
 }],
 "loop": true,
 "name": &"fall_with_sword",
@@ -220,13 +220,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("24_4my50")
+}, {
+"duration": 1.0,
 "texture": ExtResource("22_tnf7o")
 }, {
 "duration": 1.0,
 "texture": ExtResource("23_vtoq6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_4my50")
 }],
 "loop": true,
 "name": &"jump_with_sword",
@@ -377,8 +377,8 @@ script = ExtResource("3_odvu6")
 position = Vector2(-5.02858, -8.63364)
 scale = Vector2(0.776719, 0.592463)
 sprite_frames = SubResource("SpriteFrames_sohxe")
-animation = &"run_with_sword"
-frame_progress = 0.772274
+animation = &"jump_with_sword"
+frame_progress = 0.21398
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -2.5)
