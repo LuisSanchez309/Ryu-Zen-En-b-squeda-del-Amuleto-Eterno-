@@ -1,14 +1,13 @@
-[gd_scene load_steps=89 format=3 uid="uid://ln85llv8md7"]
+[gd_scene load_steps=82 format=3 uid="uid://ln85llv8md7"]
 
 [ext_resource type="Script" path="res://scenes/game/ui/main_menu/main_menu.gd" id="1_g1i31"]
-[ext_resource type="Texture2D" uid="uid://c8apilaqosli4" path="res://assets/sprites/treasure_hunters/palm_tree_island/sprites/background/additional_sky.png" id="2_66173"]
 [ext_resource type="Texture2D" uid="uid://c8gbrqkb3q2ei" path="res://assets/sprites/treasure_hunters/wood_and_paper_ui/sprites/yellow_button/2.png" id="2_foa6f"]
 [ext_resource type="AudioStream" uid="uid://btstmivulu2by" path="res://assets/sounds/pirate_game_tune.ogg" id="2_gcb8x"]
 [ext_resource type="Texture2D" uid="uid://dpeemr04vg2s2" path="res://assets/sprites/treasure_hunters/wood_and_paper_ui/sprites/sliders/4.png" id="2_ifayy"]
+[ext_resource type="Texture2D" uid="uid://ddyqyppvl5v6n" path="res://scenes/game/ui/main_menu/paisaje.PNG" id="3_5qlfv"]
 [ext_resource type="Texture2D" uid="uid://boj2dfl141v17" path="res://assets/sprites/treasure_hunters/wood_and_paper_ui/sprites/yellow_button/3.png" id="3_10kh6"]
 [ext_resource type="Texture2D" uid="uid://dfpvdu8l86t7s" path="res://assets/sprites/treasure_hunters/wood_and_paper_ui/sprites/sliders/5.png" id="3_ha70u"]
-[ext_resource type="Texture2D" uid="uid://cg6wkkuni8aq8" path="res://assets/sprites/treasure_hunters/palm_tree_island/sprites/background/bg_image.png" id="3_heeya"]
-[ext_resource type="Texture2D" uid="uid://xjmch2w77hf8" path="res://assets/sprites/treasure_hunters/palm_tree_island/sprites/background/additional_water.png" id="4_0xs5f"]
+[ext_resource type="Texture2D" uid="uid://nuwk732sts0e" path="res://scenes/game/ui/main_menu/roca.png" id="4_5v3cf"]
 [ext_resource type="Texture2D" uid="uid://b4y4paxn2nw2y" path="res://assets/sprites/treasure_hunters/wood_and_paper_ui/sprites/yellow_button/4.png" id="4_76ed7"]
 [ext_resource type="Texture2D" uid="uid://d0uycw76ah71t" path="res://assets/sprites/treasure_hunters/wood_and_paper_ui/sprites/sliders/6.png" id="4_s2jl3"]
 [ext_resource type="Texture2D" uid="uid://kfc2kokx4vgl" path="res://assets/sprites/treasure_hunters/palm_tree_island/sprites/background/water_reflect_big_01.png" id="5_j1k1l"]
@@ -253,24 +252,6 @@ region = Rect2(4, 4, 10, 11)
 [sub_resource type="Theme" id="Theme_6e42f"]
 default_font_size = 30
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d8nc7"]
-load_path = "res://.godot/imported/small_cloud_1.png-40532304be8a8e58b358963bfcb15f67.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i0q63"]
-load_path = "res://.godot/imported/small_cloud_1.png-40532304be8a8e58b358963bfcb15f67.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_legtt"]
-load_path = "res://.godot/imported/small_cloud_1.png-40532304be8a8e58b358963bfcb15f67.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d18gj"]
-load_path = "res://.godot/imported/small_cloud_1.png-40532304be8a8e58b358963bfcb15f67.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xltub"]
-load_path = "res://.godot/imported/small_cloud_3.png-2824e524f4818e08cf60700642ab74ab.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tofkg"]
-load_path = "res://.godot/imported/small_cloud_3.png-2824e524f4818e08cf60700642ab74ab.ctex"
-
 [sub_resource type="Animation" id="Animation_ownx8"]
 length = 0.001
 tracks/0/type = "value"
@@ -360,23 +341,18 @@ bus = &"Ambient"
 
 [node name="Background" type="Node2D" parent="Main/World"]
 
-[node name="Sky" type="Sprite2D" parent="Main/World/Background"]
-position = Vector2(598, 158)
-scale = Vector2(39.25, 11.1875)
-texture = ExtResource("2_66173")
+[node name="Paisaje" type="Sprite2D" parent="Main/World/Background"]
+position = Vector2(579, 328.375)
+scale = Vector2(1.44313, 1.46569)
+texture = ExtResource("3_5qlfv")
 
-[node name="Bg" type="Sprite2D" parent="Main/World/Background"]
-position = Vector2(595.5, 395)
-scale = Vector2(3.27344, 1)
-texture = ExtResource("3_heeya")
-
-[node name="Water" type="Sprite2D" parent="Main/World/Background"]
-position = Vector2(597, 566)
-scale = Vector2(39.0625, 7.0625)
-texture = ExtResource("4_0xs5f")
+[node name="Roca" type="Sprite2D" parent="Main/World/Background"]
+position = Vector2(192.5, 625)
+scale = Vector2(1.534, 0.731235)
+texture = ExtResource("4_5v3cf")
 
 [node name="AnimWater" type="AnimatedSprite2D" parent="Main/World/Background"]
-position = Vector2(618, 462)
+position = Vector2(-527, 377)
 scale = Vector2(3.94118, 5.6)
 sprite_frames = SubResource("SpriteFrames_4u6xb")
 frame_progress = 0.303069
@@ -411,27 +387,22 @@ position = Vector2(505, -109)
 shape = SubResource("RectangleShape2D_rab7k")
 
 [node name="Flag" type="AnimatedSprite2D" parent="Main/World/Ship"]
-position = Vector2(397, 398)
+position = Vector2(-423, 398)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_rd73b")
 frame_progress = 0.786022
 
 [node name="MainCharacter" parent="Main/World/Ship" instance=ExtResource("11_4tiyj")]
-position = Vector2(149, 467)
+position = Vector2(207, 472)
 scale = Vector2(5, 5)
 collision_layer = 2147483648
 collision_mask = 2147483648
 
 [node name="Ship" type="AnimatedSprite2D" parent="Main/World/Ship"]
-position = Vector2(296, 586)
+position = Vector2(-505, 591)
 scale = Vector2(7.2375, 6)
 sprite_frames = SubResource("SpriteFrames_q32o8")
 frame_progress = 0.136203
-
-[node name="Water2" type="Sprite2D" parent="Main/World"]
-position = Vector2(597, 640)
-scale = Vector2(39.0625, 2.4375)
-texture = ExtResource("4_0xs5f")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Main"]
 
@@ -908,6 +879,7 @@ theme_override_font_sizes/font_size = 24
 text = "Controles"
 
 [node name="GameControls" type="CanvasLayer" parent="Main"]
+visible = false
 
 [node name="Background" type="ColorRect" parent="Main/GameControls"]
 anchors_preset = 15
@@ -1190,41 +1162,11 @@ position = Vector2(500, 0)
 motion_scale = Vector2(0.1, 0.1)
 motion_mirroring = Vector2(1200, 0)
 
-[node name="Cloud" type="Sprite2D" parent="Main/ParallaxBackground/ParallaxLayer1"]
-position = Vector2(171, 83.004)
-scale = Vector2(4, 2.667)
-texture = SubResource("CompressedTexture2D_d8nc7")
-
-[node name="Cloud2" type="Sprite2D" parent="Main/ParallaxBackground/ParallaxLayer1"]
-position = Vector2(547, 119.004)
-scale = Vector2(4, 2.667)
-texture = SubResource("CompressedTexture2D_i0q63")
-
-[node name="Cloud3" type="Sprite2D" parent="Main/ParallaxBackground/ParallaxLayer1"]
-position = Vector2(949, 39.004)
-scale = Vector2(4, 2.667)
-texture = SubResource("CompressedTexture2D_legtt")
-
-[node name="Cloud4" type="Sprite2D" parent="Main/ParallaxBackground/ParallaxLayer1"]
-position = Vector2(1211, 123.004)
-scale = Vector2(4, 2.667)
-texture = SubResource("CompressedTexture2D_d18gj")
-
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="Main/ParallaxBackground"]
 position = Vector2(400, 0)
 scale = Vector2(0.7, 0.7)
 motion_scale = Vector2(0.6, 0.6)
 motion_mirroring = Vector2(1200, 0)
-
-[node name="Cloud" type="Sprite2D" parent="Main/ParallaxBackground/ParallaxLayer3"]
-position = Vector2(249, 373)
-scale = Vector2(4, 4.324)
-texture = SubResource("CompressedTexture2D_xltub")
-
-[node name="Cloud2" type="Sprite2D" parent="Main/ParallaxBackground/ParallaxLayer3"]
-position = Vector2(725, 303)
-scale = Vector2(4, 4.324)
-texture = SubResource("CompressedTexture2D_tofkg")
 
 [node name="Parallax1" type="AnimationPlayer" parent="Main/ParallaxBackground"]
 libraries = {
@@ -1232,10 +1174,10 @@ libraries = {
 }
 
 [node name="Parallax2" type="AnimationPlayer" parent="Main/ParallaxBackground"]
-speed_scale = 0.5
 libraries = {
 "": SubResource("AnimationLibrary_hyuae")
 }
+speed_scale = 0.5
 
 [connection signal="pressed" from="Main/CanvasLayer/Options/Init/Button/Button" to="." method="_on_button_pressed"]
 [connection signal="toggled" from="Main/CanvasLayer/Options/Fullscreen/CheckButton" to="." method="_on_check_button_toggled"]
