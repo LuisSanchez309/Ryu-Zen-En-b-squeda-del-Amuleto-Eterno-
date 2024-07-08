@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://c8gbrqkb3q2ei" path="res://assets/sprites/treasure_hunters/wood_and_paper_ui/sprites/yellow_button/2.png" id="2_foa6f"]
 [ext_resource type="Texture2D" uid="uid://dpeemr04vg2s2" path="res://assets/sprites/treasure_hunters/wood_and_paper_ui/sprites/sliders/4.png" id="2_ifayy"]
 [ext_resource type="AudioStream" uid="uid://ddqh4jujncv50" path="res://assets/sounds/menú.mp3" id="2_kb18c"]
-[ext_resource type="Texture2D" uid="uid://ddyqyppvl5v6n" path="res://scenes/game/ui/main_menu/paisaje.PNG" id="3_5qlfv"]
 [ext_resource type="Texture2D" uid="uid://boj2dfl141v17" path="res://assets/sprites/treasure_hunters/wood_and_paper_ui/sprites/yellow_button/3.png" id="3_10kh6"]
 [ext_resource type="Texture2D" uid="uid://dfpvdu8l86t7s" path="res://assets/sprites/treasure_hunters/wood_and_paper_ui/sprites/sliders/5.png" id="3_ha70u"]
+[ext_resource type="Texture2D" uid="uid://d4j13ijxn7nqx" path="res://scenes/game/ui/main_menu/fondomenu2.PNG" id="3_k328u"]
 [ext_resource type="Texture2D" uid="uid://nuwk732sts0e" path="res://scenes/game/ui/main_menu/roca.png" id="4_5v3cf"]
 [ext_resource type="Texture2D" uid="uid://b4y4paxn2nw2y" path="res://assets/sprites/treasure_hunters/wood_and_paper_ui/sprites/yellow_button/4.png" id="4_76ed7"]
 [ext_resource type="Texture2D" uid="uid://d0uycw76ah71t" path="res://assets/sprites/treasure_hunters/wood_and_paper_ui/sprites/sliders/6.png" id="4_s2jl3"]
@@ -341,13 +341,13 @@ bus = &"Ambient"
 
 [node name="Background" type="Node2D" parent="Main/World"]
 
-[node name="Paisaje" type="Sprite2D" parent="Main/World/Background"]
-position = Vector2(579, 328.375)
-scale = Vector2(1.44313, 1.46569)
-texture = ExtResource("3_5qlfv")
+[node name="Fondomenu2" type="Sprite2D" parent="Main/World/Background"]
+position = Vector2(577, 332)
+scale = Vector2(1.48897, 1.26714)
+texture = ExtResource("3_k328u")
 
 [node name="Roca" type="Sprite2D" parent="Main/World/Background"]
-position = Vector2(192.5, 625)
+position = Vector2(222, 630)
 scale = Vector2(1.534, 0.731235)
 texture = ExtResource("4_5v3cf")
 
