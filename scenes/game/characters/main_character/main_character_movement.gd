@@ -42,7 +42,7 @@ var turn_side: String = "right" # Define si se esta reproducionedo el sonido
 # Precargamos los sonidos de saltar
 var _jump_sound = preload("res://assets/sounds/salto.mp3")
 var _run_sound = preload("res://assets/sounds/running.mp3")
-var _dead_sound = preload("res://assets/sounds/dead.mp3")
+var _dead_sound = preload("res://assets/sounds/male-death.mp3")
 var _male_hurt_sound = preload("res://assets/sounds/male_hurt.mp3")
 var _hit_sound = preload("res://assets/sounds/sword.mp3")
 
