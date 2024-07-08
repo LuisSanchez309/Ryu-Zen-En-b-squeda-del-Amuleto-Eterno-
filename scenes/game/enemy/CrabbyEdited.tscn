@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bo37g7mv4j6pn"]
+[gd_scene load_steps=40 format=3 uid="uid://bo37g7mv4j6pn"]
 
 [ext_resource type="Script" path="res://scenes/game/enemy/crabby.gd" id="1_c8fof"]
 [ext_resource type="Texture2D" uid="uid://dmcbqvag56hwh" path="res://assets/sprites/enemigo2/Idle/1.png" id="2_1mdv3"]
@@ -6,12 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://cf5wiai7w1f0y" path="res://assets/sprites/enemigo2/Attack1/1.png" id="4_6sdp3"]
 [ext_resource type="Texture2D" uid="uid://cpe6syahadc07" path="res://assets/sprites/enemigo2/Attack1/2.png" id="5_fgceu"]
 [ext_resource type="Texture2D" uid="uid://ch4w3s35kkm62" path="res://assets/sprites/enemigo2/Attack1/3.png" id="6_qmd3f"]
-[ext_resource type="Texture2D" uid="uid://dblsxkqlgqw1g" path="res://assets/sprites/enemigo2/Death/0.png" id="7_o8yem"]
-[ext_resource type="Texture2D" uid="uid://66u8u3nwjmlu" path="res://assets/sprites/enemigo2/Death/1.png" id="8_acu0q"]
-[ext_resource type="Texture2D" uid="uid://cvyek0obsgbod" path="res://assets/sprites/enemigo2/Death/3.png" id="9_fya10"]
-[ext_resource type="Texture2D" uid="uid://csvkqyn1ljeg7" path="res://assets/sprites/enemigo2/Death/2.png" id="10_5cv5r"]
+[ext_resource type="Texture2D" uid="uid://crnxad3bsquxd" path="res://assets/sprites/enemigo2/Death.png" id="7_nslhc"]
 [ext_resource type="Texture2D" uid="uid://bo5swqemu5t6h" path="res://assets/sprites/enemigo2/Death/4.png" id="11_75jkh"]
-[ext_resource type="Texture2D" uid="uid://crt82dqh2ckd5" path="res://assets/sprites/enemigo2/Death/6.png" id="12_3x2o0"]
 [ext_resource type="Texture2D" uid="uid://bk1emhgsnucov" path="res://assets/sprites/enemigo2/Death/5.png" id="13_tji73"]
 [ext_resource type="Texture2D" uid="uid://dl5cohy5r5odv" path="res://assets/sprites/enemigo2/Fall/0.png" id="14_sqwis"]
 [ext_resource type="Texture2D" uid="uid://6x8rxfv50qo7" path="res://assets/sprites/enemigo2/Fall/1.png" id="15_20h8l"]
@@ -32,6 +28,34 @@
 [ext_resource type="Texture2D" uid="uid://bco4mthdpe8qn" path="res://assets/sprites/enemigo2/Run/6.png" id="30_nbp0q"]
 [ext_resource type="Texture2D" uid="uid://cauakqgmeigqh" path="res://assets/sprites/enemigo2/Run/7.png" id="31_k4rhj"]
 [ext_resource type="Texture2D" uid="uid://l2xhb3srapic" path="res://assets/sprites/treasure_hunters/the_crusty_crew/sprites/crabby/11_attack_effect/attack_effect_03.png" id="43_weqld"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rx8s0"]
+atlas = ExtResource("7_nslhc")
+region = Rect2(70, 68, 67, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtbd1"]
+atlas = ExtResource("7_nslhc")
+region = Rect2(274, 68, 67, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mp4fo"]
+atlas = ExtResource("7_nslhc")
+region = Rect2(478, 68, 67, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmkc3"]
+atlas = ExtResource("7_nslhc")
+region = Rect2(682, 68, 67, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5cfj"]
+atlas = ExtResource("7_nslhc")
+region = Rect2(886, 68, 67, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5bvnm"]
+atlas = ExtResource("7_nslhc")
+region = Rect2(1090, 68, 67, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqjkw"]
+atlas = ExtResource("7_nslhc")
+region = Rect2(1294, 68, 67, 68)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fq7gh"]
 animations = [{
@@ -62,25 +86,25 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_o8yem")
+"texture": SubResource("AtlasTexture_rx8s0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_acu0q")
+"texture": SubResource("AtlasTexture_wtbd1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_fya10")
+"texture": SubResource("AtlasTexture_mp4fo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_5cv5r")
+"texture": SubResource("AtlasTexture_jmkc3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_75jkh")
+"texture": SubResource("AtlasTexture_t5cfj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_3x2o0")
+"texture": SubResource("AtlasTexture_5bvnm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_tji73")
+"texture": SubResource("AtlasTexture_pqjkw")
 }],
 "loop": false,
 "name": &"dead_ground",
@@ -161,11 +185,6 @@ animations = [{
 "name": &"jump",
 "speed": 5.0
 }, {
-"frames": [],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("24_wahj0")
@@ -228,7 +247,7 @@ script = ExtResource("1_c8fof")
 position = Vector2(3.67905, -4.20242)
 scale = Vector2(0.625512, 0.721515)
 sprite_frames = SubResource("SpriteFrames_fq7gh")
-animation = &"run"
+animation = &"fall"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 1.5)

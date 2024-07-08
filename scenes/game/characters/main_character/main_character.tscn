@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://ca3ueo0yewjov"]
+[gd_scene load_steps=60 format=3 uid="uid://ca3ueo0yewjov"]
 
 [ext_resource type="Script" path="res://scenes/game/characters/main_character/MainCharacterBomb.gd" id="3_odvu6"]
 [ext_resource type="Texture2D" uid="uid://dbu3flf00vqh8" path="res://assets/sprites/Samurai/Attack_1/Attack_1_0.png" id="4_j3muv"]
@@ -14,8 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://b107itpfhsblm" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/captain_clown_nose/sword_effects/25-attack_2/attack_2_02.png" id="11_qm4vv"]
 [ext_resource type="Texture2D" uid="uid://fu00a0uh6xl3" path="res://assets/sprites/Samurai/Attack_3/airAtacck2.png" id="12_acsj1"]
 [ext_resource type="Texture2D" uid="uid://bbcsy2nv17cpl" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/captain_clown_nose/sword_effects/25-attack_2/attack_2_03.png" id="12_wjmjd"]
-[ext_resource type="Texture2D" uid="uid://cmqvvsgylck72" path="res://assets/sprites/Samurai/Dead/Dead0.png" id="13_kqmgf"]
-[ext_resource type="Texture2D" uid="uid://cq872ttk3coop" path="res://assets/sprites/Samurai/Dead/Dead1.png" id="14_tsh56"]
+[ext_resource type="Texture2D" uid="uid://bsuam7xmwoc4q" path="res://assets/sprites/Samuraiiiii/Dead.png" id="13_well4"]
 [ext_resource type="Texture2D" uid="uid://dcrnimofemtti" path="res://assets/sprites/Samurai/Dead/Dead2.png" id="15_4g4ok"]
 [ext_resource type="Texture2D" uid="uid://dfg3abeud2jfp" path="res://assets/sprites/Samurai/Dead/Dead3.png" id="16_lu0m5"]
 [ext_resource type="Texture2D" uid="uid://byneuyip8gku7" path="res://assets/sprites/Samurai/default/default_0.png" id="17_c3qdh"]
@@ -49,6 +48,30 @@
 [ext_resource type="Texture2D" uid="uid://cxctf3c5kurwl" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/dust_particles/run_04.png" id="55_qndtn"]
 [ext_resource type="Texture2D" uid="uid://dfilactnw23ej" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/dust_particles/run_05.png" id="56_e847i"]
 [ext_resource type="Script" path="res://scenes/game/characters/main_character/main_character_collision.gd" id="57_7h47x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fkhv"]
+atlas = ExtResource("13_well4")
+region = Rect2(30, 59, 55, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1brk0"]
+atlas = ExtResource("13_well4")
+region = Rect2(161, 59, 55, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nm8qs"]
+atlas = ExtResource("13_well4")
+region = Rect2(292, 59, 55, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ynrf"]
+atlas = ExtResource("13_well4")
+region = Rect2(423, 59, 55, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlqbe"]
+atlas = ExtResource("13_well4")
+region = Rect2(554, 59, 55, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgime"]
+atlas = ExtResource("13_well4")
+region = Rect2(685, 59, 55, 69)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sohxe"]
 animations = [{
@@ -110,16 +133,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("13_kqmgf")
+"texture": SubResource("AtlasTexture_3fkhv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_tsh56")
+"texture": SubResource("AtlasTexture_1brk0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_4g4ok")
+"texture": SubResource("AtlasTexture_nm8qs")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_lu0m5")
+"texture": SubResource("AtlasTexture_6ynrf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlqbe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgime")
 }],
 "loop": false,
 "name": &"dead_ground",
@@ -127,16 +156,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("15_4g4ok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4g4ok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4g4ok")
+}, {
+"duration": 1.0,
 "texture": ExtResource("16_lu0m5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_4g4ok")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_4g4ok")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_4g4ok")
 }],
 "loop": false,
 "name": &"dead_hit",
@@ -374,11 +403,11 @@ character = NodePath("..")
 script = ExtResource("3_odvu6")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
-position = Vector2(-5.02858, -8.63364)
-scale = Vector2(0.776719, 0.592463)
+position = Vector2(-2.3635, -5.89306)
+scale = Vector2(0.687883, 0.510655)
 sprite_frames = SubResource("SpriteFrames_sohxe")
-animation = &"jump_with_sword"
-frame_progress = 0.21398
+animation = &"dead_ground"
+frame = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -2.5)
@@ -401,7 +430,7 @@ frame_progress = 1.0
 [node name="AreaSword" type="Area2D" parent="." groups=["hit"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaSword"]
-position = Vector2(21.5, 6)
+position = Vector2(21, 0)
 shape = SubResource("RectangleShape2D_841yf")
 disabled = true
 

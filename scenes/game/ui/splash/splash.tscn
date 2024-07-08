@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://b1affhr4ts3ew"]
 
 [ext_resource type="Script" path="res://scenes/game/ui/splash/splash.gd" id="1_roa58"]
-[ext_resource type="Texture2D" uid="uid://k1yb8hn46r0n" path="res://assets/sprites/logo.png" id="2_p17l1"]
+[ext_resource type="Texture2D" uid="uid://bldicer2rgwy5" path="res://scenes/game/ui/splash/LogoDFS.png" id="2_sr04n"]
 [ext_resource type="Texture2D" uid="uid://b24wey0khy116" path="res://assets/sprites/logo-Endless.png" id="3_g3n3v"]
 [ext_resource type="Texture2D" uid="uid://c5pdxxbplprpe" path="res://assets/sprites/pixelfrog.png" id="4_r4eep"]
 
@@ -74,7 +74,7 @@ script = ExtResource("1_roa58")
 
 [node name="GP360" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-texture = ExtResource("2_p17l1")
+texture = ExtResource("2_sr04n")
 offset = Vector2(576, 312)
 
 [node name="Endless" type="Sprite2D" parent="."]
