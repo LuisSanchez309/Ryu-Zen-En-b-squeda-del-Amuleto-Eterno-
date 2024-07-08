@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scenes/game/ui/main_menu/main_menu.gd" id="1_g1i31"]
 [ext_resource type="Texture2D" uid="uid://c8gbrqkb3q2ei" path="res://assets/sprites/treasure_hunters/wood_and_paper_ui/sprites/yellow_button/2.png" id="2_foa6f"]
-[ext_resource type="AudioStream" uid="uid://btstmivulu2by" path="res://assets/sounds/pirate_game_tune.ogg" id="2_gcb8x"]
 [ext_resource type="Texture2D" uid="uid://dpeemr04vg2s2" path="res://assets/sprites/treasure_hunters/wood_and_paper_ui/sprites/sliders/4.png" id="2_ifayy"]
+[ext_resource type="AudioStream" uid="uid://ddqh4jujncv50" path="res://assets/sounds/menú.mp3" id="2_kb18c"]
 [ext_resource type="Texture2D" uid="uid://ddyqyppvl5v6n" path="res://scenes/game/ui/main_menu/paisaje.PNG" id="3_5qlfv"]
 [ext_resource type="Texture2D" uid="uid://boj2dfl141v17" path="res://assets/sprites/treasure_hunters/wood_and_paper_ui/sprites/yellow_button/3.png" id="3_10kh6"]
 [ext_resource type="Texture2D" uid="uid://dfpvdu8l86t7s" path="res://assets/sprites/treasure_hunters/wood_and_paper_ui/sprites/sliders/5.png" id="3_ha70u"]
@@ -333,7 +333,7 @@ script = ExtResource("1_g1i31")
 [node name="Main" type="Node2D" parent="."]
 
 [node name="AmbientSound" type="AudioStreamPlayer" parent="Main"]
-stream = ExtResource("2_gcb8x")
+stream = ExtResource("2_kb18c")
 autoplay = true
 bus = &"Ambient"
 
